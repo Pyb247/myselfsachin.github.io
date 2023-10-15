@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en" class="overflow-x-hidden max-w-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sachin Pal - Portfolio</title>
+
+    <meta name="description" content="India Based Full Stack Developer building custom digital solutions that help your business grow. My work is conversion-focused, brand-accurate, and user-friendly.">
+    <meta property="og:title" content="Sachin Pal - Portfolio">
+    <meta property="og:site_name" content="Sachin Pal - Portfolio" />
+    <meta property="og:description" content="India based fullstack developer building custom digital solutions that help your business grow. My work is conversion-focused, brand-accurate, and user-friendly.">
+    <meta property="og:image" content="https://thumbsnap.com/i/kh9kzyRv.jpg">
+    <meta property="og:type" content="website">
+
+    <meta name="theme-color" content="#34a1cd">
+
+
+    <link href='https://fonts.googleapis.com/css?family=Preahvihear' rel='stylesheet'>
+    <link rel="icon" href="https://thumbsnap.com/i/kh9kzyRv.jpg">
+
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body class="text-grey-900 overflow-x-hidden max-w-full">
+    <div>
+        <div class="py-8 hidden lg:block" data-aos="fade-down">
+            <div class="container flex justify-between items-center">
+                <a href="/" class="flex-grow text-4xl">👋</a>
+                <div class="flex gap-12 font-bold items-center">
+                    <a href="/#services" class="link">Services</a>
+                    <a href="/#portfolio" class="link">Portfolio</a>
+                    <a href="/#connect" class="button py-3 px-8 bg-grey-900">Connect</a>
+                </div>
+            </div>
+        </div>
+        <div x-data="{ open : false }" x-data="{ animation: '' }" x-init="
+    animation = lottie.loadAnimation({
+        container: btn,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: '/assets/site/burger-menu.json'
+    })">
+            <div class="py-10 absolute top-0 w-full lg:hidden z-50 transition-colors">
+                <div class="container flex justify-between items-center">
+
+                    <a href="/" class="flex-grow text-4xl">👋</a>
+
+
+                    <div class="w-full h-full flex justify-end items-center">
+                        <div class="w-10 h-10 cursor-pointer relative stroke-primary">
+                            <div id="btn" class="w-10 h-10 cursor-pointer relative fill-current text-brandGreen-main" @click="
+                            open = !open, 
+                            open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())
+                        "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="absolute inset-0 z-20 bg-blue-300 overflow-scroll" x-show="open" x-cloak x-transition.opacity.duration.500ms>
+                <div class="h-28 bg-blue-300 fixed z-40 w-full"></div>
+                <nav class="mt-28 pb-12 container grid grid-cols-1 divide-y divide-purple-500 divide-opacity-50">
+
+                    <a href="/#services" class="block font-semibold text-3xl py-8" @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Services</a>
+
+                    <a href="/#portfolio" class="block font-semibold text-3xl py-8" @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Portfolio</a>
+
+                    <a href="/#connect" class="block font-semibold text-3xl py-8" @click="open = !open, open ? (animation.setDirection(1), animation.setSpeed(1.5), animation.play()) : (animation.setDirection(-1), animation.setSpeed(2), animation.play())">Connect</a>
+
+                </nav>
+            </div>
+        </div>
+        <div id="mobile-menu" class="absolute inset-0 z-20 bg-blue-300 overflow-scroll hidden">
+            <div class="h-28 bg-blue-300 fixed z-40 w-full"></div>
+            <nav class="mt-28 pb-12 container grid grid-cols-1 divide-y divide-purple-500 divide-opacity-50">
+
+                <a href="/#services" class="block font-semibold text-3xl py-8">Services</a>
+
+                <a href="/#portfolio" class="block font-semibold text-3xl py-8">Portfolio</a>
+
+                <a href="/#connect" class="block font-semibold text-3xl py-8">Connect</a>
+
+            </nav>
+        </div>
+        <header>
+            <div class="container grid lg:grid-cols-2 gap-12 items-center pt-36 lg:pt-28 pb-24 lg:pb-48">
+                <div>
+                    <div class="flex mb-2" data-aos="fade-up">
+                        <img src="https://d33wubrfki0l68.cloudfront.net/6e15034b71981e7553ddb6ba5acdf9b64c152af1/2e27b/assets/site/location.svg" alt="web designers in etobicoke" class="w-3.5 mr-2" width="512" height="512">
+                        <h1 class="text-base text-grey-600">India, Full Stack Developer </h1>
+                    </div>
+                    <h2 class="title mb-6" data-aos="fade-up" data-aos-once="true">I Build Custom <span class="text-blue-900">Digital Solutions</span> That Help Your <span class="text-blue-900">Business Grow</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="200" data-aos-once="true">I enhance conversion and performance across the board.</p>
+                    <div class="flex gap-4 text-white mt-8" data-aos="fade-up" data-aos-delay="400" data-aos-offset="-200" data-aos-once="true">
+                        <a href="#portfolio" class="button w-44">See my work</a>
+                        <a href="mailto:softwaredevloper676@gmail.com?subject=Wanted to chat about..." class="button w-44 bg-blue-900 hover:shadow-blue-900/20">Start a project</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <script>
+                        window.addEventListener('load', function() {
+                            window.responsiveResizeObserver = new ResizeObserver((entries) => {
+                                entries.forEach(entry => {
+                                    const imgWidth = entry.target.getBoundingClientRect().width;
+                                    entry.target.parentNode.querySelectorAll('source').forEach((source) => {
+                                        source.sizes = Math.ceil(imgWidth / window.innerWidth * 100) + 'vw';
+                                    });
+                                });
+                            });
+
+                            document.querySelectorAll('[data-statamic-responsive-images]').forEach(responsiveImage => {
+                                responsiveResizeObserver.onload = null;
+                                responsiveResizeObserver.observe(responsiveImage);
+                            });
+                        });
+                    </script>
+
+                    <picture>
+
+                        <img class="hidden lg:block absolute top-8 left-0 z-10" data-aos="fade" data-aos-delay="800" data-aos-once="1" src="https://d33wubrfki0l68.cloudfront.net/42b55b52cc435b03f1437a0fa12f87f0fc01daf4/0f7ea/assets/site/purple-dots.svg" alt="purple-dots.svg"
+                            width="149" height="93">
+                    </picture>
+
+                    <div class="w-full pb-[100%] h-0 bg-blue-500 lg:rounded-tr-none overflow-hidden relative rounded-full" data-aos="fade-left" data-aos-delay="400" data-aos-once="true">
+                        <picture>
+
+                            <img width="747" height="613" class="absolute h-full inset-0 object-cover" src="https://thumbsnap.com/i/kh9kzyRv.jpg" alt="michael.png" width="747" height="613" data-statamic-responsive-images>
+                        </picture>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="w-full bg-purple-300 h-px mb-8 sm:mb-28"></div>
+
+        <div id="services" class="container py-16">
+            <h2 class="title text-center mb-12" data-aos="fade-up">My Services</h2>
+
+            <div class="grid sm:grid-cols-2 gap-8">
+
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-blue-500 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="https://d33wubrfki0l68.cloudfront.net/5cb8d43b8b1aa9f101e03eb8ee60256b5b692011/77ecf/assets/site/dev.svg" alt="dev.svg" width="48" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Web Design & Development</h3>
+                        </div>
+                        <p><b>I don't just create visually appealing websites.</b> My expertise lies in crafting websites that go beyond mere aesthetics. I specialize in constructing websites that not only captivate visually, but also prioritize driving
+                            conversions, maintaining brand integrity, and ensuring a seamless user experience.</p>
+                    </div>
+                </div>
+
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-yellow-300 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="https://d33wubrfki0l68.cloudfront.net/0de1524cc6e6e00d74033964afe06f6abbf535b9/8eebf/assets/site/seo.svg" alt="seo.svg" width="59.5" height="59.5">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">SEO</h3>
+                        </div>
+                        <p><b>Attracting a larger audience is paramount.</b> Even with a website that excels at converting visitors into customers, its effectiveness is limited if it lacks traffic. Securing a prominent position on Google's search rankings
+                            is crucial for attracting new clients and driving them to your virtual doorstep.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-red-300 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img style="mix-blend-mode: multiply;" class="w-8" src="data:image/png;base64,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"
+                                        alt="branding.svg" width="50" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Mobile app Development</h3>
+                        </div>
+                        <p><b>I don't just create.</b> I specialize in building high-performing, aesthetically pleasing apps that are focused on driving conversions, maintaining brand consistency, and providing an intuitive user experience.</p>
+                    </div>
+                </div>
+
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-purple-300 p-4 rounded-2xl" style="background-color: rgba(255, 229, 200, 0.683);">
+                                <picture>
+
+                                    <img style="mix-blend-mode: multiply;" class="w-8" src="data:image/png;base64,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"
+                                        alt="photo.svg" width="48" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Web redesign</h3>
+                        </div>
+                        <p><b>When it comes to website redesigning,</b> I excel at transforming outdated and underperforming websites into modern, visually appealing platforms. My focus is not just on giving the website a fresh look, but also on optimizing
+                            its performance, enhancing user experience, and aligning it with your brand identity.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-purple-300 p-4 rounded-2xl" style="background-color: rgba(255, 229, 200, 0.683);">
+                                <picture>
+
+                                    <img style="mix-blend-mode: multiply;" class="w-8" src="data:image/png;base64,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"
+                                        alt="photo.svg" width="48" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Digital marketing</h3>
+                        </div>
+                        <p><b> In the realm of digital marketing,</b> I specialize in website redesign for digital marketing, transforming outdated sites into visually stunning platforms. I focus on optimizing performance, enhancing user experience, and
+                            aligning with brand identity to drive success.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-purple-300 p-4 rounded-2xl">
+                                <picture>
+
+                                    <img class="w-8" src="https://d33wubrfki0l68.cloudfront.net/fc1f13a6bd0db94af77699d93cf6c1a2e6b42a69/00a1e/assets/site/photo.svg" alt="photo.svg" width="48" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Photo & Video</h3>
+                        </div>
+                        <p><b>Show, don't tell.</b> Photos and videos are effective at telling the story of who you are and what you do, establishing trust, and building relationships with potential customers.</p>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up">
+                    <div class="p-8 sm:p-12 rounded-2xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-4">
+                            <div class="bg-red-300 p-4 rounded-2xl">
+                                <picture>
+                                    <img class="w-8" src="https://d33wubrfki0l68.cloudfront.net/7d53e157b675f7fa9bc5b7ba168893353dbcf633/03f20/assets/site/branding.svg" alt="branding.svg" width="50" height="48">
+                                </picture>
+                            </div>
+                            <h3 class="text-2xl font-bold">Graphic & Branding</h3>
+                        </div>
+                        <p><b>Catch the eye.</b> In addition to web services, I can produce branding and marketing resources for both print and digital applications.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="portfolio" class="pt-24 pb-16 relative">
+            <div class="bg-red-300 rounded-l-[3.5rem] absolute top-0 right-0 w-[70%] py-56" style="background-color: rgba(188, 239, 255, 0.655);" data-aos="fade-left"></div>
+            <div class="container relative z-50">
+                <div data-aos="fade-up">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600">Portfolio</h3>
+                    <h2 class="title">Recent Work</h2>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-8 mt-24" data-aos="fade-up">
+
+                    <a href="https://proevents.in/" target="_blank" class="relative">
+                        <picture>
+
+                            <img alt="Flint Learning Solutions etobicoke web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/ExfSfX43.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">proevents.in</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://realene.com/" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Canada 1 Car Sales etobicoke website design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/GAJT2aF4.png" width="726" height="726" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">realene.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://narayanevents.com/" target="_blank" class="relative">
+                        <picture>
+
+                            <img alt="Lather and Steel web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/fCvGqi4s.png" width="726" height="726" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">narayanevents.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.rajashreeeventsgoa.com/" target="_blank" class="relative">
+                        <picture>
+
+                            <img alt="Every Square Inch web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/TDG7U4pV.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">rajashreeeventsgoa.com</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.syst.tuitionapp2&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Westminster Chapel church website" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/CpuRWtoK.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.pressfit&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Better Way Property Maintenance website design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/NPTJPJfk.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.me.gsmkart.gsm_kart&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Oh Snap Photo Booth web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/qrvVC56b.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.chowdeck.com&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Westminster Chapel church website" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/WCPaZUEJ.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PLayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=play.hearts.industries.heartinztechnetstore&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Better Way Property Maintenance website design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/WarBfxH6.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.hotelbooking.androidapp" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Oh Snap Photo Booth web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/7gS8Dyab.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.rider.hire_me&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Oh Snap Photo Booth web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/MJZSJARN.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://play.google.com/store/apps/details?id=com.oneness.foundation.app&pcampaignid=web_share" target="_blank" class="relative">
+                        <picture>
+                            <img alt="Oh Snap Photo Booth web design" width="726" height="726" class="rounded-3xl" src="https://thumbsnap.com/i/Fyoe6i24.png" width="720" height="720" data-statamic-responsive-images>
+                        </picture>
+
+                        <div class="absolute inset-0 flex justify-center items-center overflow-hidden rounded-3xl opacity-0 hover:opacity-100 duration-500 group">
+                            <div class="absolute inset-0 bg-grey-700 opacity-80"></div>
+                            <div class="z-10 flex flex-col justify-center items-center translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+                                <picture>
+
+                                    <img alt="open car sales website" class="w-5 mb-1" src="https://d33wubrfki0l68.cloudfront.net/621fc099b299fce91c2b699d7f08a6e620e38917/d6b3b/assets/site/open.svg" width="448" height="512">
+                                </picture>
+
+                                <p class="text-white">PlayStore</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="sqq rounded-3xl relative overflow-hidden pb-[100%]">
+                        <div class="z-50 absolute inset-0 flex flex-col justify-center text-center items-center">
+                            <p class="font-bold text-3xl mb-8 font-heading">Your website/App here</p>
+                            <a href="mailto:rgfullstack001@gmail.com?subject=Wanted to chat about..." class="button px-6">Start a project</a>
+                        </div>
+                        <picture>
+                            <source type="image/webp" media="" srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFDRVVsRVFWUlloYTJYMlk3RE1BaEZMOWovLzdzekdzVXdEd2FiN0tFcGt0VTBqZUd3bUZENmFVMXhJV3EvaWdLTEFuOE4rQkhnVi9wM0dVL1NsUm9BMHd3QktBQ1lnSHF6NjBMTitqb3JZZ3JTQUc1WVgxajNyWUlQSS9ERzg2MGUvb0t1b0RJdlh3VDRUTklwb0xEeU8vZVNqc0FBb0NPVitUU2tBTnd3NHlvS09ZZzBBS00zRUQ2TVFGNGVBN2pIVEVBaDYyUjRINFZjRFpqWGhlWTZWL0FNSXA4Qzg3NVNYMjhoYXFhbHhqUlVCaHFBSnIwdG4zZElEYnNQQUZMV2RaNkNDa0NvTDZVTzBVNGh6a0ZTRWZEdGpHNjBFaUJzM2t1M2NRMnhCNWtBdXQ1SUFaYTIwU09BdFFORUtoS0FERUp3SjJvQW5rTUgwR25VbHlmZlFSek9VOUZEWW8rcFFaaStPNUFxQW9oRHhLZTkyVERBM0QvWDRRa0ZhYmVaZTJTS0FBczZoQmpFV1ZycXNuVGpJak9QSGdFeDQxcTZZdUw5TzJCQVdGcFk3WmphQ05mUXh6azVPU20xUlFCZEE1QVloSnAzeFQ1RGFqd3RSV2Q3TG5aRXE2WENJekhTdkVwQm16VVF4ZStSMXdmYk13ekFRRVlOaGplVEQ1dGVwT0pwOEFoczdGUzVtYkc4Tmdaa21ZK3p2UXppWVNDeVVjdDZnOUkwdkRWRkFPcWpsbTNHSTZ4N1hVSVV4Z25YL1QybFkwZFRFNUhYQ2pXckVVdkw2bmlHQy9WTFhmZVZqd0VHaEZVNzRqcFF2Z1U2a25vOVZseDM5cU0yVHNIN0orbTlpY0JKNGpBTDdtcm5rNUVwUDVZZnRPZzNzMWwrS3FiWm1nZklDMG1QWkc2YytiM3hOTUQ0UDBEZjhSNEEvZ0diYk8rUllsQWppUUFBQUFCSlJVNUVya0pnZ2c9PSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/41398a35e6c418d5c3a6ca91f7ac0b49acaf1a6b/7ec6d/img/containers/assets/work/yourproject.png/d0fd71091c8ef6c437cb4d39a252646c.webp 800w"
+                                sizes="1px">
+
+                            <source media="" srcset="data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHg9IjAiCiAgICAgeT0iMCIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxpbWFnZSB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHhsaW5rOmhyZWY9ImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBQ0FBQUFBZ0NBWUFBQUJ6ZW5yMEFBQUFDWEJJV1hNQUFBN0VBQUFPeEFHVkt3NGJBQUFDRVVsRVFWUlloYTJYMlk3RE1BaEZMOWovLzdzekdzVXdEd2FiN0tFcGt0VTBqZUd3bUZENmFVMXhJV3EvaWdLTEFuOE4rQkhnVi9wM0dVL1NsUm9BMHd3QktBQ1lnSHF6NjBMTitqb3JZZ3JTQUc1WVgxajNyWUlQSS9ERzg2MGUvb0t1b0RJdlh3VDRUTklwb0xEeU8vZVNqc0FBb0NPVitUU2tBTnd3NHlvS09ZZzBBS00zRUQ2TVFGNGVBN2pIVEVBaDYyUjRINFZjRFpqWGhlWTZWL0FNSXA4Qzg3NVNYMjhoYXFhbHhqUlVCaHFBSnIwdG4zZElEYnNQQUZMV2RaNkNDa0NvTDZVTzBVNGh6a0ZTRWZEdGpHNjBFaUJzM2t1M2NRMnhCNWtBdXQ1SUFaYTIwU09BdFFORUtoS0FERUp3SjJvQW5rTUgwR25VbHlmZlFSek9VOUZEWW8rcFFaaStPNUFxQW9oRHhLZTkyVERBM0QvWDRRa0ZhYmVaZTJTS0FBczZoQmpFV1ZycXNuVGpJak9QSGdFeDQxcTZZdUw5TzJCQVdGcFk3WmphQ05mUXh6azVPU20xUlFCZEE1QVloSnAzeFQ1RGFqd3RSV2Q3TG5aRXE2WENJekhTdkVwQm16VVF4ZStSMXdmYk13ekFRRVlOaGplVEQ1dGVwT0pwOEFoczdGUzVtYkc4Tmdaa21ZK3p2UXppWVNDeVVjdDZnOUkwdkRWRkFPcWpsbTNHSTZ4N1hVSVV4Z25YL1QybFkwZFRFNUhYQ2pXckVVdkw2bmlHQy9WTFhmZVZqd0VHaEZVNzRqcFF2Z1U2a25vOVZseDM5cU0yVHNIN0orbTlpY0JKNGpBTDdtcm5rNUVwUDVZZnRPZzNzMWwrS3FiWm1nZklDMG1QWkc2YytiM3hOTUQ0UDBEZjhSNEEvZ0diYk8rUllsQWppUUFBQUFCSlJVNUVya0pnZ2c9PSIgLz4KPC9zdmc+Cg== 32w, https://d33wubrfki0l68.cloudfront.net/9b46cd82853136a4d3e1e54f3d529a8d909c0ed1/5d956/img/containers/assets/work/yourproject.png/8f1f0dcf4130ef7652b9c9445d8dfc24.png 800w"
+                                sizes="1px">
+
+                            <img class="absolute inset-0" src="https://d33wubrfki0l68.cloudfront.net/3e764f8540663a208fda9569f022451d86014d04/647f0/assets/work/yourproject.png" alt="yourproject.png" width="800" height="800" data-statamic-responsive-images>
+                        </picture>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container pt-24 pb-16">
+            <div class="flex flex-col sm:flex-row">
+                <div class="w-full sm:w-2/5" data-aos="fade-right">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600">Methodology</h3>
+                    <h2 class="title">My Process</h2>
+                </div>
+                <div class="w-full sm:w-3/5 flex flex-col gap-4">
+
+
+                    <div data-aos="fade-left">
+                        <div class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-blue-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-blue-900">Phase 1</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Discovery</h4>
+                            <p>This is the phase where I dive deep into your world and get to know you. Before I can properly design your high-performing website, I need to understand you, your pain-points, and your audience.</p>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left">
+                        <div class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-yellow-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-yellow-900">Phase 2</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Design</h4>
+                            <p>I take what I’ve learned about you & craft a bespoke website that’s tailored to meet your unique needs, all while accurately representing your brand & keeping things aesthetically pleasing & useable for your audience.</p>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left">
+                        <div class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500" data-aos="fade-left">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-red-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-red-900">Phase 3</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Build</h4>
+                            <p>Once you’re happy with the designs, I will proceed to building them making sure everything is optimised to follow modern web practices, such as speed, security and reliability.</p>
+                        </div>
+                    </div>
+
+
+                    <div data-aos="fade-left">
+                        <div class="p-8 rounded-3xl shadow-3xl shadow-grey-500/40 sm:shadow-none sm:hover:shadow-3xl transition-shadow duration-500" data-aos="fade-left">
+                            <div class="flex items-center">
+                                <div class="w-2 h-2 rounded-full bg-purple-900 mr-2"></div>
+                                <p class="font-bold tracking-widest text-purple-900">Phase 4</p>
+                            </div>
+                            <h4 class="font-bold text-4xl mb-2">Launch</h4>
+                            <p>After I’ve completed the build and double checked everything alongside your approval, it’s time to launch your website. In this phase I will also provide some training videos on how you can add content to your website so you
+                                can do it yourself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="connect" class="container" data-aos="fade-up">
+            <div class="bg-blue-300 rounded-3xl py-24 lg:pt-24 lg:pb-12 px-12">
+                <div class="text-center">
+                    <h3 class="font-bold uppercase tracking-widest text-grey-600 mb-4">Contact Me</h3>
+                    <h2 class="title text-4xl">Got a Project? Lets Talk!</h2>
+                    <div class="flex flex-col sm:flex-row justify-center items-center mt-12">
+                        <picture>
+
+                            <img class="w-12 mr-4" src="https://d33wubrfki0l68.cloudfront.net/08410ce2cf34f129b7fd89cada11458fb69836bb/584bd/assets/site/mail.svg" alt="mail.svg" width="48" height="48">
+                        </picture>
+
+                        <a href="mailto:softwaredevloper676@gmail.com?subject=Wanted to chat about..." class="text-xl sm:text-3xl text-grey-600 font-bold tracking-tight hover:underline">softwaredevloper676@gmail.com</a>
+                    </div>
+                </div>
+                <div class="hidden lg:flex justify-between items-center mt-24">
+                    <a href="/" class="flex-grow text-3xl">👋</a>
+                    <div class="flex gap-12 font-bold items-center">
+                        <a href="#services" class="link">Services</a>
+                        <a href="#portfolio" class="link">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-12 text-center">
+            <p class="text-base text-grey-600">© 2023 Sachin Pal | Full Stack Developer. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="js.js"></script>
+
+    <!-- Google Analytics load on scroll -->
+    <script>
+        function analyticsOnScroll() {
+            var head = document.getElementsByTagName('head')[0]
+            var script = document.createElement('script')
+            script.type = 'text/javascript';
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-H7N1XHH71J'
+            head.appendChild(script);
+
+            document.removeEventListener('scroll', analyticsOnScroll);
+        };
+
+        document.addEventListener('scroll', analyticsOnScroll);
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-H7N1XHH71J');
+    </script>
+</body>
+
+</html>
